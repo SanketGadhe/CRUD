@@ -17,8 +17,7 @@ const Home = () => {
           Hello, I am <span className="text-teal-400">Sanket Gadhe</span>.
         </p>
         <p className="mb-4">
-          I am grateful for the opportunity to interview for the React Developer
-          Internship role. I have completed the CRUD operation assignment as
+        I am grateful for the opportunity to complete the assignment for the React Developer Internship role at Synergy. I have completed the CRUD operation assignment as
           requested. This project demonstrates my ability to perform Create,
           Read, Update, and Delete operations using React and fetching data from
           an API.
@@ -28,12 +27,12 @@ const Home = () => {
           further discussing how I can be an asset to your company. Thank you
           once again for this opportunity.
         </p>
-        <div className="mt-6 flex justify-around">
+        <div className="mt-6 flex justify-around flex-wrap gap-1">
           <button
             onClick={handleEmailClick}
             className="bg-teal-400 text-gray-900 font-bold py-2 px-4 rounded hover:bg-teal-300 transition duration-200"
           >
-            Email Me
+            Mail Me
           </button>
           <NavLink
             to={'/Users'}

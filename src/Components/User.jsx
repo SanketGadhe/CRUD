@@ -190,22 +190,22 @@ const User = () => {
       ) : (
         ""
       )}
-      <div className="addnew fixed top-20">
+      <div className="addnew mt-14  ">
         <button
           className="bg-[#00968a] text-white px-4 py-2 rounded-md mr-2 hover:bg-[#00514a] transition-colors"
           onClick={() => {
             setadduser(true);
           }}
         >
-          Add User
+          Add New User
         </button>
         {notification && <Notification message={notification} />}
       </div>
-      <div className="text-black flex flex-wrap justify-center gap-x-10 py-10">
+      <div className="text-black flex flex-wrap justify-center gap-x-10 pb-10">
         {users.map((user, key) => {
           return (
             <div key={key}>
-              <div className="mx-auto max-w-md p-6 bg-[#c7cbd1] shadow-md rounded-md mt-4 text-[black] w-[45vw]">
+              <div className="mx-auto max-w-md p-6 bg-[#c7cbd1] shadow-md rounded-md mt-4 text-[black] w-[45vw] max-md:w-[80vw]">
                 <div className="mb-2">
                   <p className="block mb-1 font-semibold">Name </p>
 
@@ -223,7 +223,7 @@ const User = () => {
                   <p>{user.phone}</p>
                 </div>
                 <div className="flex justify-end">
-                  <div>
+                  <div className="flex gap-1 flex-wrap">
                     <button
                       className="bg-[#00968a] text-white px-4 py-2 rounded-md mr-2 hover:bg-[#00514a] transition-colors"
                       onClick={() => {
@@ -247,8 +247,8 @@ const User = () => {
           );
         })}
         {isEditing && (
-          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-            <div className="bg-white p-6 rounded-md shadow-md max-w-md w-full">
+          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 ">
+            <div className="bg-white p-6 rounded-md shadow-md max-w-md w-full max-md:w-[80vw]">
               <h2 className="text-xl font-semibold mb-2">Edit User</h2>
               <form onSubmit={handleSave}>
                 <div className="mb-2">
@@ -311,7 +311,7 @@ const User = () => {
         )}
         {adduser && (
           <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-            <div className="bg-white p-6 rounded-md shadow-md max-w-md w-full">
+            <div className="bg-white p-6 rounded-md shadow-md max-w-md w-full max-md:w-[80vw]">
               <h2 className="text-xl font-semibold mb-2">Add New User</h2>
               <form onSubmit={handleSavenew}>
                 <div className="mb-2">
