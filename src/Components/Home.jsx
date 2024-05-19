@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
   const handleEmailClick = () => {
@@ -6,9 +7,7 @@ const Home = () => {
       "mailto:sanketgadhe366@gmail.com?subject=Response to React Developer Internship&body=Dear Sanket,";
   };
 
-  const handleProjectClick = () => {
-    window.location.href = "/Users";
-  };
+
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white p-6 ">
@@ -36,12 +35,12 @@ const Home = () => {
           >
             Email Me
           </button>
-          <button
-            onClick={handleProjectClick}
+          <NavLink
+            to={'/users'}
             className="bg-teal-400 text-gray-900 font-bold py-2 px-4 rounded hover:bg-teal-300 transition duration-200"
           >
             Explore CRUD Project
-          </button>
+          </NavLink>
         </div>
         <footer className="mt-4 text-gray-500 text-sm">
           Sanket Gadhe | sanketgadhe366@gmail.com

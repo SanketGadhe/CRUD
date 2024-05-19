@@ -105,7 +105,7 @@ const User = () => {
 
   const handleSavenew = async (e) => {
     e.preventDefault();
-    // const id = users.length + 1;
+    const id = users.length + 1;
     const userwithid = { ...newuser, id };
     console.log(userwithid);
     setloading(true);
@@ -199,7 +199,7 @@ const User = () => {
         {users.map((user, key) => {
           return (
             <div key={key}>
-              <div className="mx-auto max-w-md p-6 bg-[#c7cbd1] shadow-md rounded-md mt-4 text-[#004944] w-[45vw]">
+              <div className="mx-auto max-w-md p-6 bg-[#c7cbd1] shadow-md rounded-md mt-4 text-[black] w-[45vw]">
                 <div className="mb-2">
                   <p className="block mb-1 font-semibold">Name </p>
 

@@ -46,7 +46,7 @@ const Detailed = () => {
         {users.map((user, key) => {
           return (
             <div key={key}>
-              <div className="mx-auto max-w-md p-6 bg-[#c7cbd1] text-[#004944] shadow-md rounded-md mt-4  w-[45vw]">
+              <div className="mx-auto max-w-md p-6 bg-[#c7cbd1] text-[black] shadow-md rounded-md mt-4  w-[45vw]">
                 <div className="mb-2">
                   <p className="block mb-1 font-semibold">Name </p>
 
