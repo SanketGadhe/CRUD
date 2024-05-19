@@ -6,9 +6,6 @@ const Home = () => {
     window.location.href =
       "mailto:sanketgadhe366@gmail.com?subject=Response to React Developer Internship&body=Dear Sanket,";
   };
-
-
-
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white p-6 ">
       <div className="bg-gray-800 p-8 rounded-lg shadow-lg max-w-md w-full text-center mt-10">

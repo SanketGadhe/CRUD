@@ -9,7 +9,9 @@ import { Outlet } from 'react-router-dom'
 const App = () => {
   return (
     <div className='bg-[#222831] text-white min-h-[100vh]'>
+
     <Navbar/>
+    {/* Outlet will render different componenet */}
     <Outlet/>
   </div>
     

@@ -25,6 +25,7 @@ const User = () => {
   });
 
   useEffect(() => {
+    // fetch user info on page load
     const fetchuser = async () => {
       const response = await fetch(
         "https://jsonplaceholder.typicode.com/users/"
@@ -53,6 +54,7 @@ const User = () => {
       phone: user.phone,
     });
   };
+  // handeling form field on user input during update operation
   const handelchange = (e) => {
     const { name, value } = e.target;
     setformdata({
@@ -60,6 +62,7 @@ const User = () => {
       [name]: value,
     });
   };
+  // handeling form field on user input during Create operation
   const handeluserchange = (e) => {
     const { name, value } = e.target;
     setnewuser({
@@ -67,6 +70,7 @@ const User = () => {
       [name]: value,
     });
   };
+  // to save updated data by making put request to api
   const handleSave = async (e) => {
     e.preventDefault();
     try {
@@ -102,6 +106,7 @@ const User = () => {
       setloading(false);
     }
   };
+  // to save new user data by making post request to api
 
   const handleSavenew = async (e) => {
     e.preventDefault();
@@ -146,6 +151,7 @@ const User = () => {
       setloading(false);
     }
   };
+  // To delete user using his her id
   const handleDelete = async (id) => {
     setloading(true);
 
@@ -169,7 +175,7 @@ const User = () => {
       seterror(error);
     }
   };
-
+// To display error pop up 
   if (error) {
     return  <div className="fixed top-15 right-4 bg-red-600 text-white px-4 py-2 rounded shadow-lg z-50 flex items-center">
     <p>{error.message}</p>
@@ -183,6 +189,7 @@ const User = () => {
   }
   return (
     <div className="userpage px-5 py-5 ">
+      {/* During Loading  */}
       {loading ? (
         <div className="loader z-30 flex justify-center items-center w-full h-screen    absolute  ">
           <Loader />
@@ -190,6 +197,7 @@ const User = () => {
       ) : (
         ""
       )}
+      {/* Add new user from here */}
       <div className="addnew mt-14  ">
         <button
           className="bg-[#00968a] text-white px-4 py-2 rounded-md mr-2 hover:bg-[#00514a] transition-colors"
@@ -201,7 +209,9 @@ const User = () => {
         </button>
         {notification && <Notification message={notification} />}
       </div>
+      
       <div className="text-black flex flex-wrap justify-center gap-x-10 pb-10">
+        {/* Rendering each user through map function */}
         {users.map((user, key) => {
           return (
             <div key={key}>
@@ -246,6 +256,7 @@ const User = () => {
             </div>
           );
         })}
+        {/* If user will update detail then edit form will be shown */}
         {isEditing && (
           <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 ">
             <div className="bg-white p-6 rounded-md shadow-md max-w-md w-full max-md:w-[80vw]">
@@ -309,6 +320,7 @@ const User = () => {
             </div>
           </div>
         )}
+        {/* If user want to add then add form will be shown */}
         {adduser && (
           <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
             <div className="bg-white p-6 rounded-md shadow-md max-w-md w-full max-md:w-[80vw]">
