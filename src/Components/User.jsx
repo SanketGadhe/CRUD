@@ -184,7 +184,7 @@ const User = () => {
   return (
     <div className="userpage px-5 py-5 ">
       {loading ? (
-        <div className="loader z-30 flex justify-center items-center w-full h-screen   opacity-30 absolute  ">
+        <div className="loader z-30 flex justify-center items-center w-full h-screen    absolute  ">
           <Loader />
         </div>
       ) : (
