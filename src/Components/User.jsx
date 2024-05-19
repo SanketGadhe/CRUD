@@ -171,8 +171,14 @@ const User = () => {
   };
 
   if (error) {
-    return  <div className="fixed top-4 right-4 bg-red-600 text-white px-4 py-2 rounded shadow-lg z-50 flex items-center">
+    return  <div className="fixed top-15 right-4 bg-red-600 text-white px-4 py-2 rounded shadow-lg z-50 flex items-center">
     <p>{error.message}</p>
+    <button
+        onClick={()=>window.location.reload()}
+        className="ml-4 bg-red-800 text-white rounded-full p-1 hover:bg-red-700"
+      >
+        ✕
+      </button>
   </div>;
   }
   return (
