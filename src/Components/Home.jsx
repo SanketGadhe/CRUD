@@ -36,7 +36,7 @@ const Home = () => {
             Email Me
           </button>
           <NavLink
-            to={'/users'}
+            to={'/Users'}
             className="bg-teal-400 text-gray-900 font-bold py-2 px-4 rounded hover:bg-teal-300 transition duration-200"
           >
             Explore CRUD Project
